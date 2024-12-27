@@ -1,0 +1,24 @@
+<aura:component controller="DummyLateResponse" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="bool" type="Boolean" default="true" />
+    <aura:attribute name="res" type="String" default="https://picsum.photos/200" />
+    <aura:attribute name="myMap" type="Map" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:card title="Mock API Call" iconName="custom:custom14" class="slds-var-m-around_medium">
+        <aura:if isTrue="{!v.bool}" >
+            <div class="slds-align_absolute-center slds-var-m-around_medium">
+                <img src="{!v.res}" alt="Lorem Picsum"></img>
+            </div>
+            <aura:set attribute="else" >
+                <lightning:spinner alternativeText="Loading" size="large" />
+            </aura:set>
+    	</aura:if>
+        <br/>
+        <aura:iteration items="{!v.myMap}" var="s">
+            <div class="slds-var-m-left_medium">{!s.value}</div>
+        </aura:iteration>
+        {!myMap}
+        <div class="slds-var-m-around_medium">
+            <lightning:button label="Add Map" variant="brand" onclick="{!c.onClicking}" />
+        </div>
+    </lightning:card>
+</aura:component>

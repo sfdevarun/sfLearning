@@ -1,0 +1,17 @@
+.THIS {
+    background-color: yellow !important;
+    --slds-c-badge-color-background: #009DDC;
+    --slds-c-badge-text-color: white;
+    --slds-c-badge-font-size: 1.5rem;
+    --slds-c-badge-color-border: white;
+    color: blue;
+}
+.THIS .red{
+    color: red;
+}
+.THIS .blue{
+    color: blue;
+}
+.THIS .green{
+    color: green;
+}

@@ -1,0 +1,31 @@
+<aura:component controller="Colors" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="num" type="Integer" default="100" />
+    <aura:attribute name="percent" type="Integer" default="100" />
+    <aura:attribute name="colors" type="String[]" default="['cyan', 'yellow', 'magenta']" />
+    <aura:attribute name="time" type="String" />
+    <aura:attribute name="numbers" type="List" />
+    <aura:attribute name="meraMap" type="Map" default="{a : 'one Value'}" />
+    <aura:attribute name="dummy" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="render" value="{!this}" action="{!c.onRerender}"/> 
+    <div style="background-color:#16325c;" class="slds-var-m-around_medium">
+        <lightning:button label="Click Me!" onclick="{! c.handleClick }" name="button1" aura:id="Button One" class="slds-button_inverse button slds-var-m-around_medium" />
+    	<lightning:button label="Click Me Too!" onclick="{! c.handleClick }" name="button2" aura:id="Button Two" class="slds-button_inverse button slds-var-m-around_medium" />
+	</div>
+    <div class="slds-var-m-around_medium slds-var-p-around_medium">
+    	<lightning:input type="number" name="givenNumber" value="{! v.num }" placeholder="type a number..." label="Enter a number" />
+        <lightning:input type="number" name="givenPercent" value="{! v.percent }" placeholder="type a percent..." label="Enter a percent" formatter="percent-fixed" />
+        {!v.percent}% of {!v.num} is {!div(mult(v.num, v.percent), 100)}.
+        <div class="slds-text-heading_large slds-text-align_center slds-text-color_destructive">Current Time is {!v.time}</div>
+        {!join(' ',v.colors[0], v.colors[1], v.colors[2])}<br/>
+        <aura:iteration items="{!v.numbers}" var="temp" >
+        	<h3>
+            	{!temp.myKey}
+            </h3>
+        </aura:iteration>
+        <br/>
+        {!v.dummy}
+        <br/>
+        <lightning:button label="Update Colors and Show Map Values!" onclick="{! c.updateColors }" class="slds-button_inverse button" />
+    </div>
+</aura:component>

@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<div class="slds-m-around_medium slds-var-p-around_medium">
+        <div>
+        	{!v.recordId}
+        </div>
+        <div class="red" style="color: brown;">
+        I am a Divison.
+        </div>
+        <p class="blue">
+            I am a paragraph.
+        </p>
+        <h1 class="slds-text-heading_large slds-text-align_center">
+            I am a heading.
+        </h1>
+        <lightning:badge label="Styling apply karna seekh lo friends!" class="slds-align_absolute-center"/><br/>
+        <span class="green">
+            I am a span.
+        </span><br/>
+        <img src="https://picsum.photos/200" alt="Some Image" class="slds-align_absolute-center"></img>
+    </div>
+</aura:component>

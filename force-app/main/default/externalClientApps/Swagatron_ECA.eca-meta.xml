@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>arun.jaiswal@salesforce.com</contactEmail>
+    <distributionState>Packaged</distributionState>
+    <iconUrl>https://login.salesforce.com/logos/Salesforce/Lightning/icon.png</iconUrl>
+    <isProtected>false</isProtected>
+    <label>Swagatron ECA</label>
+    <logoUrl>https://login.salesforce.com/logos/Salesforce/Lightning/logo.png</logoUrl>
+    <orgScopedExternalApp>00DB000000FX1Yh:Swagatron_ECA</orgScopedExternalApp>
+</ExternalClientApplication>
