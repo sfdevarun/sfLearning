@@ -1,7 +1,7 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
     <aura:attribute name="fields" type="String[]" default="['Name', 'Rating', 'Industry', 'Active__c']" />
     <div class="slds-var-m-around_medium">
-        <lightning:card title="This is record Form" iconName="standard:account">
+        <lightning:card title="This is a record Form for creating a record" iconName="standard:account">
             <div class="slds-var-p-around_medium">
                 <lightning:notificationsLibrary aura:id="notifLib"/>
                 <lightning:recordForm objectApiName="Account" fields="{!v.fields}" columns="2" onerror="{!c.handleError}" />

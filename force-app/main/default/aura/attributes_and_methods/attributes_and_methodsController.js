@@ -29,7 +29,7 @@
         })
         $A.enqueueAction(action);
         var numbers = [];
-        for(var i=0; i<20; i++) {
+        for(var i=0; i<5; i++) {
             numbers.push({myKey : i});
         }
         cmp.set('v.numbers', numbers);

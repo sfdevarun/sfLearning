@@ -19,17 +19,19 @@
     	<lightning:input type="number" name="givenNumber" value="{! v.num }" placeholder="type a number..." label="Enter a number" />
         <lightning:input type="number" name="givenPercent" value="{! v.percent }" placeholder="type a percent..." label="Enter a percent" formatter="percent-fixed" />
         {!v.percent}% of {!v.num} is {!div(mult(v.num, v.percent), 100)}.
-        <h1 style="font-weight: bolder; font-size:larger">==================================================Percentage (%) Calculator using expressions in markup</h1><br/><br/>
+        <h1 style="font-weight: bolder; font-size:larger">==================================================Percentage (%) Calculator using expressions in markup</h1><br/>
+        <h1 style="font-weight: bolder; font-size:larger">==================================================Real Time Clock</h1>
         <div class="slds-text-heading_large slds-text-align_center slds-text-color_destructive">Current Time is {!v.time}</div>
-        <div style="font-weight: bolder; font-size:larger">{!join(' ',v.colors[0], v.colors[1], v.colors[2])}</div><br/>
+        <h1 style="font-weight: bolder; font-size:larger">==================================================Real Time Clock</h1><br/>
+        <div style="font-weight: bolder; font-size:larger">{!join(' ',v.colors[0], v.colors[1], v.colors[2])}</div>
         <aura:iteration items="{!v.numbers}" var="temp" >
         	<h3>
             	{!temp.myKey}
             </h3>
         </aura:iteration>
-        <br/>
+        <!-- <br/>
         {!v.dummy}
-        <br/>
+        <br/> -->
         <lightning:button label="Update Colors and Show Map Values!" onclick="{! c.updateColors }" class="slds-button_inverse button" />
     </div>
 </aura:component>

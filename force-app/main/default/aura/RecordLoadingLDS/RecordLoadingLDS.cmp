@@ -1,12 +1,12 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
     <div class="slds-var-m-around_medium">
-        <lightning:card title="This is record Form" iconName="standard:account">
+        <lightning:card title="This is record Form for loading a record" iconName="standard:account">
             <div class="slds-var-p-around_medium">
                 <lightning:recordForm recordId="001eb000000q0buAAA" objectApiName="Account" layoutType="Compact" mode="view" columns="2" />
             </div>
         </lightning:card>        
         <br/><br/><br/>
-        <lightning:card title="This is record View Form" iconName="standard:account">
+        <lightning:card title="This is record View Form for loading a record" iconName="standard:account">
             <div class="slds-var-p-around_medium">
                 <lightning:recordViewForm recordId="001eb000000q0buAAA" objectApiName="Account">
                     <div class="slds-grid slds-gutters">
