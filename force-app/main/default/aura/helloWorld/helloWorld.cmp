@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="userInput" type="String" default="World" />
+    <aura:attribute name="Yoo" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.loadValues}" />
+    <div class="slds-var-m-around_medium" id="gray">
+    	<lightning:input name="input8" value="{! v.userInput }" placeholder="type your first name..." label="Text field with attribute binding" onchange="{!c.yourAction}" aura:id="inputOne" />
+        <lightning:button variant="brand" label="Brand" onclick="{!c.handleClick}" />
+    	Hello, {!v.userInput}&nbsp;{!v.Yoo}
+    </div>
+        <ul>
+            <li class="red" style="background-color: purple;">One</li>
+            <li class="blue">Two</li>
+            <li class="green">Three</li>
+    	</ul>
+    <div style="font-size: 2rem; background: grey;">{!v.recordId}</div>
+</aura:component>
