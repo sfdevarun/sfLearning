@@ -1,0 +1,28 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="parentMessage" type="String" default="Message from Parent"/>
+    <aura:attribute name="child1Message" type="String"/>
+    <aura:attribute name="child2Message" type="String"/>
+    <aura:attribute name="applicationEventMessage" type="String"/>
+    <aura:handler event="c:ApplicationEvent" action="{!c.handleApplicationEvent}"/>
+
+    <lightning:card title="Parent Component" class="slds-box slds-theme_default">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2 slds-box">
+                <c:Child1Component aura:id="child1Cmp" onComponentEvent="{!c.handleComponentEvent}"/>
+                <p class="slds-var-m-top_medium slds-var-m-left_medium">Message from Child 1: {!v.child1Message}</p>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-box">
+                <c:Child2Component aura:id="child2Cmp" onComponentEvent="{!c.handleComponentEvent}"/>
+                <p class="slds-var-m-top_medium slds-var-m-left_medium">Message from Child 2: {!v.child2Message}</p>
+            </div>
+        </div>
+        <br/>
+        <div class="slds-align_absolute-center">
+            <lightning:button variant="brand" label="Call Child1 Method" onclick="{!c.callChild1Method}" />
+            <lightning:button variant="brand" label="Call Child2 Method" onclick="{!c.callChild2Method}" />
+        </div>
+        <div class="slds-m-top_medium">
+            <p class="slds-align_absolute-center">Application Event Message: {!v.applicationEventMessage}</p>
+        </div>
+    </lightning:card>
+</aura:component>

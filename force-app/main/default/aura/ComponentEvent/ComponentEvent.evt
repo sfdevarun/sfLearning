@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Event to communicate between components">
+    <aura:attribute name="source" type="String" />
+    <aura:attribute name="message" type="String" />
+</aura:event>

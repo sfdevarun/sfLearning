@@ -1,0 +1,12 @@
+<aura:component>
+    <aura:registerEvent name="onComponentEvent" type="c:ComponentEvent"/>
+    <aura:registerEvent name="appEvent" type="c:ApplicationEvent"/>
+    <aura:method name="childMethod" action="{!c.childMethodHandler}" >
+        <aura:attribute name="message" type="String"/>
+    </aura:method>
+
+    <lightning:card title="Child 1 Component" class="slds-box slds-theme_shade">
+        <lightning:button variant="brand" label="Send Component Event to Parent" onclick="{!c.fireComponentEvent}"/>
+        <lightning:button variant="brand" label="Send Application Event" onclick="{!c.fireApplicationEvent}"/>
+    </lightning:card>
+</aura:component>
