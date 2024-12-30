@@ -5,15 +5,15 @@
     <aura:attribute name="applicationEventMessage" type="String"/>
     <aura:handler event="c:ApplicationEvent" action="{!c.handleApplicationEvent}"/>
 
-    <lightning:card title="Parent Component" class="slds-box slds-theme_default">
+    <lightning:card title="{!'Parent Component: ' + v.parentMessage}" class="slds-box slds-theme_default">
         <div class="slds-grid slds-wrap">
             <div class="slds-col slds-size_1-of-2 slds-box">
-                <c:Child1Component aura:id="child1Cmp" onComponentEvent="{!c.handleComponentEvent}"/>
-                <p class="slds-var-m-top_medium slds-var-m-left_medium">Message from Child 1: {!v.child1Message}</p>
+                <c:Child1Component aura:id="child1Cmp" onComponentEvent="{!c.handleComponentEvent}" childAttri1="{#v.parentMessage}"/>
+                <p class="slds-var-m-top_medium slds-var-m-left_medium slds-text-color_success slds-text-heading--medium">Message from Child 1: {!v.child1Message}</p>
             </div>
             <div class="slds-col slds-size_1-of-2 slds-box">
-                <c:Child2Component aura:id="child2Cmp" onComponentEvent="{!c.handleComponentEvent}"/>
-                <p class="slds-var-m-top_medium slds-var-m-left_medium">Message from Child 2: {!v.child2Message}</p>
+                <c:Child2Component aura:id="child2Cmp" onComponentEvent="{!c.handleComponentEvent}" childAttri2="{#v.parentMessage}"/>
+                <p class="slds-var-m-top_medium slds-var-m-left_medium slds-text-color_destructive slds-text-heading--medium">Message from Child 2: {!v.child2Message}</p>
             </div>
         </div>
         <br/>

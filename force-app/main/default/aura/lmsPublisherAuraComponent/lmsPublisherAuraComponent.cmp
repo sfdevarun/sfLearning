@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <lightning:button label="Publish Message" onclick="{! c.handleClick }"/>
+    <lightning:messageChannel type="SampleMessageChannel__c"
+        aura:id="sampleMessageChannel"/>
+</aura:component>

@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <div class="slds-grid slds-gutters slds-box">
+        <div class="slds-col slds-box slds-theme--inverse">
+            <span>
+                Publisher Component
+            </span><br/><br/>
+            <span><c:lmsPublisherAuraComponent></c:lmsPublisherAuraComponent></span>
+        </div>
+        <div class="slds-col slds-box slds-theme--alt-inverse">
+            <span>
+                Subscriber Component
+            </span><br/><br/>
+            <span class="slds-text-font_monospace slds-text-heading--medium"><c:lmsSubscriberAuraComponent></c:lmsSubscriberAuraComponent></span>
+        </div>
+      </div>
+</aura:component>

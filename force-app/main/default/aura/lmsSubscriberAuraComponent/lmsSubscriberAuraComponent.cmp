@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordValue" type="String" default="Default Subscriber Value" />
+    <lightning:formattedText value="{!v.recordValue}" />
+    <lightning:messageChannel type="SampleMessageChannel__c"
+         onMessage="{!c.handleChanged}"/>
+</aura:component>

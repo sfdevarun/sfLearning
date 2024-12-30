@@ -14,5 +14,8 @@
     childMethodHandler: function (component, event, helper) {
         const message = event.getParam("message");
         alert("Child 1 received: " + message);
+    },
+    updateChildAttribute: function (component, event, helper) {
+        component.set("v.childAttri1", "Message from Child 1 Component");
     }
 })

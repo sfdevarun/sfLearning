@@ -4,5 +4,6 @@
     <!-- <c:expressions_and_more></c:expressions_and_more> -->
     <!-- <c:RecordLoadingLDS></c:RecordLoadingLDS> -->
     <!-- <c:RecordCreatingLDS></c:RecordCreatingLDS> -->
-     <c:ParentComponent></c:ParentComponent>
+    <c:ParentComponent></c:ParentComponent>
+     <!-- <c:pubsubParent></c:pubsubParent> -->
 </aura:application>
